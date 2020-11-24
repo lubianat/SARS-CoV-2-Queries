@@ -1,4 +1,4 @@
-LANGS ?= en nl ja es
+LANGS ?= en nl ja es pt
 
 CODEFILES: \
  $(shell groovy ../findScripts.groovy ../src .en.out | sort | uniq)
@@ -20,7 +20,8 @@ allScriptsCompiled: ${CODEFILES}
 	@echo -n "doing $@ ... "
 	@for lang in $(LANGS) ; do \
 		echo -n "$$lang " ; \
-		groovy preprocess $< $$lang > `echo "$@" | sed s/.out/.$$lang.out/` ; \
+		groovy preprocess $< $$lang > `echo "$@" | sed s/.en.out/.$$lang.out/` ; \
 		groovy postprocess $< $$lang ; \
 	done
+	@groovy createGrlc.groovy $< "$(LANGS)" > ../grlc/$<
 	@echo ""

@@ -20,8 +20,16 @@ SELECT ?date ?numberOfCases WHERE {
     <td><b>numberOfCases</b></td>
   </tr>
   <tr>
+    <td>2020-11-14</td>
+    <td>10744871</td>
+  </tr>
+  <tr>
+    <td>2020-07-26</td>
+    <td>4371992</td>
+  </tr>
+  <tr>
     <td>2020-07-07</td>
-    <td>3018306</td>
+    <td>4038967</td>
   </tr>
   <tr>
     <td>2020-06-30</td>
@@ -563,7 +571,8 @@ SELECT ?date ?numberOfCases WHERE {
 ## Ejemplos de código
 ### curl
 ```shell
-curl -o progressionUS.rq https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/progressionUS.rq
+curl -s https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/progressionUS.rq | sed 's+<lang/>+es+' > progressionUS.rq
+
 curl -H "Accept: text/tab-separated-values" -G https://query.wikidata.org/bigdata/namespace/wdq/sparql --data-urlencode query@progressionUS.rq
 ```
 Esta consulta SPARQL está disponible en CCZero.

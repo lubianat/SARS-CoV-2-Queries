@@ -61,7 +61,7 @@ SELECT ?symptom ?symptomLabel WHERE {
     <td><a href="https://scholia.toolforge.org/Q254327">anorexia</a> (<a href="http://www.wikidata.org/entity/Q254327">edit</a>)</td>
   </tr>
   <tr>
-    <td><a href="https://scholia.toolforge.org/Q344873">síndrome de dificultad respiratoria aguda</a> (<a href="http://www.wikidata.org/entity/Q344873">edit</a>)</td>
+    <td><a href="https://scholia.toolforge.org/Q327988">síndrome de desgaste profesional</a> (<a href="http://www.wikidata.org/entity/Q327988">edit</a>)</td>
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q468433">anosmia</a> (<a href="http://www.wikidata.org/entity/Q468433">edit</a>)</td>
@@ -74,6 +74,9 @@ SELECT ?symptom ?symptomLabel WHERE {
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q576349">encefalopatía</a> (<a href="http://www.wikidata.org/entity/Q576349">edit</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="https://scholia.toolforge.org/Q599982">enantema</a> (<a href="http://www.wikidata.org/entity/Q599982">edit</a>)</td>
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q606216">ageusia</a> (<a href="http://www.wikidata.org/entity/Q606216">edit</a>)</td>
@@ -103,7 +106,8 @@ SELECT ?symptom ?symptomLabel WHERE {
 ## Ejemplos de código
 ### curl
 ```shell
-curl -o symptoms.rq https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/symptoms.rq
+curl -s https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/symptoms.rq | sed 's+<lang/>+es+' > symptoms.rq
+
 curl -H "Accept: text/tab-separated-values" -G https://query.wikidata.org/bigdata/namespace/wdq/sparql --data-urlencode query@symptoms.rq
 ```
 Esta consulta SPARQL está disponible en CCZero.

@@ -36,13 +36,15 @@ Listing these symptoms:
 
 <out>symptoms</out>
 
-<section level="##" label="trials">Clinical trials</section>
+## Effects
 
-While far from complete, <topic>clinical trials</topic> registered in <topic>clinicaltrials.gov</topic> are finding their way
-into Wikidata. The following query lists a number of clinical trials with COVID-19
-as main topic:
+Besides the above symptoms, the following effects are also observed. Please note that
+the information in Wikidata has more information, because some effects are only observed
+for some people:
 
-<sparql>clinicalTrials</sparql>
+<sparql>effects</sparql>
 
-This lists has become very long, and click one of the above links
-to list them all.
+This lists these effects:
+
+<out>effects</out>
+

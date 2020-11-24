@@ -61,7 +61,7 @@ SELECT ?symptom ?symptomLabel WHERE {
     <td><a href="https://scholia.toolforge.org/Q254327">食欲不振</a> (<a href="http://www.wikidata.org/entity/Q254327">edit</a>)</td>
   </tr>
   <tr>
-    <td><a href="https://scholia.toolforge.org/Q344873">急性呼吸窮迫症候群</a> (<a href="http://www.wikidata.org/entity/Q344873">edit</a>)</td>
+    <td><a href="https://scholia.toolforge.org/Q327988">燃え尽き症候群</a> (<a href="http://www.wikidata.org/entity/Q327988">edit</a>)</td>
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q468433">嗅覚脱失</a> (<a href="http://www.wikidata.org/entity/Q468433">edit</a>)</td>
@@ -74,6 +74,9 @@ SELECT ?symptom ?symptomLabel WHERE {
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q576349">脳症</a> (<a href="http://www.wikidata.org/entity/Q576349">edit</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="https://scholia.toolforge.org/Q599982">enanthem</a> (<a href="http://www.wikidata.org/entity/Q599982">edit</a>)</td>
   </tr>
   <tr>
     <td><a href="https://scholia.toolforge.org/Q606216">味覚消失</a> (<a href="http://www.wikidata.org/entity/Q606216">edit</a>)</td>
@@ -103,7 +106,8 @@ SELECT ?symptom ?symptomLabel WHERE {
 ## コード例
 ### curl
 ```shell
-curl -o symptoms.rq https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/symptoms.rq
+curl -s https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/symptoms.rq | sed 's+<lang/>+ja+' > symptoms.rq
+
 curl -H "Accept: text/tab-separated-values" -G https://query.wikidata.org/bigdata/namespace/wdq/sparql --data-urlencode query@symptoms.rq
 ```
 本SPARQLクエリはCC0ライセンスで利用可能です。

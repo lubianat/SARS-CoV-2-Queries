@@ -57,6 +57,10 @@ SELECT ?intervention ?interventionLabel ?image WITH {
     <td>http://commons.wikimedia.org/wiki/Special:FilePath/Methylprednisolone.svg</td>
   </tr>
   <tr>
+    <td><a href="https://scholia.toolforge.org/Q422212">budesonide</a> (<a href="http://www.wikidata.org/entity/Q422212">edit</a>)</td>
+    <td>http://commons.wikimedia.org/wiki/Special:FilePath/Budesonide.png</td>
+  </tr>
+  <tr>
     <td><a href="https://scholia.toolforge.org/Q11426176">prednisolone</a> (<a href="http://www.wikidata.org/entity/Q11426176">edit</a>)</td>
     <td>http://commons.wikimedia.org/wiki/Special:FilePath/Prednisolone.svg</td>
   </tr>
@@ -64,15 +68,12 @@ SELECT ?intervention ?interventionLabel ?image WITH {
     <td><a href="https://scholia.toolforge.org/Q27107351">methylprednisolone acetate</a> (<a href="http://www.wikidata.org/entity/Q27107351">edit</a>)</td>
     <td>http://commons.wikimedia.org/wiki/Special:FilePath/Methylprednisolone%20acetate.svg</td>
   </tr>
-  <tr>
-    <td><a href="https://scholia.toolforge.org/Q27108063">prednisolone acetate</a> (<a href="http://www.wikidata.org/entity/Q27108063">edit</a>)</td>
-    <td>http://commons.wikimedia.org/wiki/Special:FilePath/Prednisolone%20acetate.svg</td>
-  </tr>
 </table>
 ## Code examples
 ### curl
 ```shell
-curl -o interventionStructures.rq https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/interventionStructures.rq
+curl -s https://raw.githubusercontent.com/egonw/SARS-CoV-2-Queries/master/sparql/interventionStructures.rq | sed 's+<lang/>+en+' > interventionStructures.rq
+
 curl -H "Accept: text/tab-separated-values" -G https://query.wikidata.org/bigdata/namespace/wdq/sparql --data-urlencode query@interventionStructures.rq
 ```
 This SPARQL query is available under CCZero.
